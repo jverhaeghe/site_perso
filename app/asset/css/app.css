@@ -1,0 +1,302 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-family: arial, sans-serif;
+  color: #242424; }
+
+h3 {
+  font-family: "Bookman", Georgia, "Times New Roman", serif;
+  font-style: italic; }
+
+.tonic {
+  color: #F2831D; }
+
+.clear {
+  clear: both; }
+
+@media (min-width: 480px) {
+  .right {
+    float: right; }
+  .left {
+    float: left; } }
+
+.error {
+  background-color: #aa0000;
+  color: white;
+  padding: 5px;
+  display: block;
+  margin: 25px 0 0 0;
+  text-align: center; }
+
+.view-container {
+  position: relative;
+  margin: 5vw 5vw 0 5vw; }
+
+.page.ng-enter, .page.ng-leave {
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; }
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  left: 0; }
+
+.gut {
+  margin: 15px; }
+
+header div {
+  float: left; }
+header h2 {
+  text-transform: uppercase;
+  font-size: 23px;
+  font-weight: bold;
+  padding: 15px 0 0 65px; }
+  @media (min-width: 480px) {
+    header h2 {
+      font-size: 36px;
+      padding: 8px 0 0 65px; } }
+
+@keyframes fade-in {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@-moz-keyframes fade-in {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+@keyframes fade-out {
+  from {
+    opacity: 1; }
+
+  to {
+    opacity: 0; } }
+
+@-moz-keyframes fade-out {
+  from {
+    opacity: 1; }
+
+  to {
+    opacity: 0; } }
+
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1; }
+
+  to {
+    opacity: 0; } }
+
+.accueil #accueil {
+  display: none; }
+.accueil > div {
+  margin: 10px 0 0 0; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .accueil > div {
+      margin: 15px 0 0 0; } }
+  @media (min-width: 1024px) {
+    .accueil > div {
+      margin: 25px 0 0 0; } }
+.accueil h1 {
+  font-size: 40px; }
+  @media (min-width: 480px) {
+    .accueil h1 {
+      font-size: 8.9vw; } }
+  .accueil h1 strong {
+    font-weight: bolder;
+    text-transform: uppercase; }
+.accueil h3 {
+  color: #595959;
+  font-size: 20px; }
+  @media (min-width: 480px) {
+    .accueil h3 {
+      font-size: 4.2vw; } }
+@media (min-width: 480px) {
+  .accueil .left {
+    width: 66.6%; } }
+.accueil .right {
+  overflow: hidden; }
+  @media (min-width: 480px) {
+    .accueil .right {
+      width: 33%; } }
+.accueil p {
+  font-size: 14px;
+  margin: 10px 0 0 0; }
+  @media (min-width: 480px) {
+    .accueil p {
+      font-size: 3vw; } }
+
+.accueil.ng-enter {
+  -webkit-animation: 0.5s fade-in;
+  -moz-animation: 0.5s fade-in;
+  -o-animation: 0.5s fade-in;
+  animation: 0.5s fade-in;
+  z-index: 100; }
+
+.accueil.ng-leave {
+  -webkit-animation: 0.5s fade-out;
+  -moz-animation: 0.5s fade-out;
+  -o-animation: 0.5s fade-out;
+  animation: 0.5s fade-out;
+  z-index: 99; }
+
+.cv.ng-enter {
+  -webkit-animation: scaleUp 1s both ease-in;
+  -moz-animation: scaleUp 1s both ease-in;
+  animation: scaleUp 1s both ease-in; }
+
+.portfolio.ng-enter {
+  -webkit-animation: 0.5s fade-in;
+  -moz-animation: 0.5s fade-in;
+  -o-animation: 0.5s fade-in;
+  animation: 0.5s fade-in;
+  z-index: 100; }
+
+.portfolio.ng-leave {
+  -webkit-animation: 0.5s fade-out;
+  -moz-animation: 0.5s fade-out;
+  -o-animation: 0.5s fade-out;
+  animation: 0.5s fade-out;
+  z-index: 99; }
+
+.contact p {
+  padding: 5px 0 0 15px; }
+.contact h3 {
+  padding: 10px 0 0 0; }
+.contact .right {
+  width: 100%;
+  height: 100%;
+  margin-top: 15px; }
+  @media (min-width: 480px) {
+    .contact .right {
+      width: 80%;
+      margin-top: 0px; } }
+
+#gmaps {
+  width: 100%;
+  height: 530px; }
+
+.button {
+  font-size: 18px;
+  font-weight: normal;
+  background-color: #F2831D;
+  text-transform: uppercase;
+  border: 2px solid #F2831D;
+  color: white;
+  display: block;
+  margin: 9px 0 0 0;
+  transition: background-color 0.5s;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 5px 0 5px 0; }
+  @media (min-width: 480px) {
+    .button {
+      text-align: left;
+      padding: 5px 0 5px 25px; } }
+  .button:hover {
+    text-decoration: none;
+    color: #F2831D;
+    background: #FFF; }
+    .button:hover span {
+      transition: opacity 0.5s, top 0.5s;
+      opacity: 1;
+      border-color: #F2831D;
+      right: 10px;
+      top: 63%; }
+  .button span {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    opacity: 0;
+    width: 10px;
+    height: 10px;
+    margin-top: -10px;
+    border: 2px solid #F2831D;
+    border-top: none;
+    border-right: none;
+    transition: opacity 0.5s, top 0.5s, right 0.5s;
+    transform: rotate(225deg); }
+
+button.btn-menu {
+  background: none;
+  background-image: url('./icon/menu-icon.png');
+  background-repeat: no-repeat;
+  height: 52px;
+  width: 52px;
+  border: 0;
+  outline-width: 0px;
+  outline: none; }
+
+body {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  body.menu-open {
+    left: 240px; }
+
+.menu-open .menu {
+  left: 0px; }
+
+.menu {
+  position: fixed;
+  left: -240px;
+  width: 240px;
+  height: 100%;
+  top: 0;
+  z-index: 1000;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .menu.open {
+    left: 0px; }
+  .menu h1 {
+    padding: 15px 0 0 15px;
+    font-size: 36px; }
+    .menu h1 strong {
+      font-weight: bold; }

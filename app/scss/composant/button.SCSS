@@ -51,9 +51,9 @@
   }
 
   //boutton qui ouvre le menu
-
+/*
   button.btn-menu{
-    background: none;
+
     background-image: url('./icon/menu-icon.png');
     background-repeat: no-repeat;
     height: 52px;
@@ -62,4 +62,41 @@
 
     outline-width: 0px;
     outline: none;
-  }
+  }*/
+ #navicon{
+   background: none;
+   height: 52px;
+   width: 52px;
+   outline-width: 0px;
+   outline: none;
+   border: solid 2px $tonic;
+   border-radius: 26px;
+   padding-left: 9px;
+   transition : background-color 500ms ease-out;
+
+   span, span:before, span:after{
+     height: 2px;
+     width: 30px;
+     background: $tonic;
+     position: absolute;
+     display: block;
+     content: '';
+   }
+   span:before {
+     top: -8px;
+   }
+   span:after {
+     bottom: -8px;
+   }
+
+ }
+.menu-open #navicon, #navicon:hover{
+   background-color : $tonic;
+   span, span:before, span:after{
+
+     background: white;
+
+   }
+ }
+
+

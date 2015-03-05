@@ -8,7 +8,7 @@ var opn       = require('opn');
 var livereload = require('gulp-livereload');
 var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
-
+var autoprefixer = require('gulp-autoprefixer')
 // --------- VARIABLES
 var server = {
     host: 'localhost',
@@ -23,7 +23,10 @@ gulp.task('watch-js', function () {
 
 gulp.task('watch-sass',function(){
     gulp.watch(['app/scss/*/*.SCSS'], ['compile-sass']);
-})
+
+});
+
+
 
 // --------- BUILDER
 gulp.task('compile-js', function () {
@@ -37,6 +40,7 @@ gulp.task('compile-js', function () {
 gulp.task('compile-sass', function () {
     gulp.src('app/scss/app.SCSS')
         .pipe(sass())
+        .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
         .pipe(gulp.dest('app/asset/css'));
 });
 

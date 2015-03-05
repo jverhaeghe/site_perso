@@ -42,6 +42,20 @@
 
 (function() {
     'use strict';
+
+    angular.module('jverhaeghePortfolio.layout', []);
+})();
+
+/**
+ * Created by Julien Verhaeghe => jverhaeghe.dev@gmail.com on 04/03/2015.
+ */
+(function() {
+    'use strict';
+    angular.module('jverhaeghePortfolio.mapDirective', []);
+})();
+
+(function() {
+    'use strict';
     angular.module('jverhaeghePortfolio.accueil', []);
 })();
 
@@ -67,74 +81,6 @@
 
     angular.module('jverhaeghePortfolio.portfolio', []);
 })();
-(function() {
-    'use strict';
-
-    angular.module('jverhaeghePortfolio.layout', []);
-})();
-
-/**
- * Created by Julien Verhaeghe => jverhaeghe.dev@gmail.com on 04/03/2015.
- */
-(function() {
-    'use strict';
-    angular.module('jverhaeghePortfolio.mapDirective', []);
-})();
-
-(function() {
-    'use strict';
-
-    angular.module('jverhaeghePortfolio.accueil')
-        .controller('Accueil', Accueil);
-
-
-    function Accueil($scope,$rootScope){
-        $scope.pageClass = "accueil";
-        $rootScope.menuIsOpen = "";
-    }
-})();
-
-/**
- * Created by Julien Verhaeghe => jverhaeghe.dev@gmail.com on 04/03/2015.
- */
-(function() {
-    'use strict';
-
-    angular.module('jverhaeghePortfolio.contact')
-        .controller('Contact', Contact);
-
-    function Contact($scope,$rootScope){
-        $scope.pageClass = "contact";
-        $rootScope.menuIsOpen = "";
-    }
-})();
-
-(function() {
-    'use strict';
-
-    angular.module('jverhaeghePortfolio.cv')
-        .controller('Cv', Cv);
-
-    Cv.$inject = ["$scope"];
-    function Cv($scope){
-        $scope.pageClass = "cv";
-    }
-
-})();
-
-(function() {
-    'use strict';
-
-    angular.module('jverhaeghePortfolio.portfolio')
-        .controller('Portfolio', Portfolio);
-
-    Portfolio.$inject = ["$scope"];
-    function Portfolio($scope){
-        $scope.pageClass = "portfolio";
-    }
-
-})();
-
 /**
  * Created by Julien Verhaeghe => jverhaeghe.dev@gmail.com on 04/03/2015.
  */
@@ -234,6 +180,60 @@
     }
 
 })();
+(function() {
+    'use strict';
+
+    angular.module('jverhaeghePortfolio.accueil')
+        .controller('Accueil', Accueil);
+
+
+    function Accueil($scope,$rootScope){
+        $scope.pageClass = "accueil";
+        $rootScope.menuIsOpen = "";
+    }
+})();
+
+/**
+ * Created by Julien Verhaeghe => jverhaeghe.dev@gmail.com on 04/03/2015.
+ */
+(function() {
+    'use strict';
+
+    angular.module('jverhaeghePortfolio.contact')
+        .controller('Contact', Contact);
+
+    function Contact($scope,$rootScope){
+        $scope.pageClass = "contact";
+        $rootScope.menuIsOpen = "";
+    }
+})();
+
+(function() {
+    'use strict';
+
+    angular.module('jverhaeghePortfolio.cv')
+        .controller('Cv', Cv);
+
+    Cv.$inject = ["$scope"];
+    function Cv($scope){
+        $scope.pageClass = "cv";
+    }
+
+})();
+
+(function() {
+    'use strict';
+
+    angular.module('jverhaeghePortfolio.portfolio')
+        .controller('Portfolio', Portfolio);
+
+    Portfolio.$inject = ["$scope"];
+    function Portfolio($scope){
+        $scope.pageClass = "portfolio";
+    }
+
+})();
+
 (function() {
     'use strict';
     angular.module('jverhaeghePortfolio.core')

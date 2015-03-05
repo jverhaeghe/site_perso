@@ -89,20 +89,6 @@ header h2 {
       font-size: 36px;
       padding: 8px 0 0 65px; } }
 
-@keyframes fade-in {
-  from {
-    opacity: 0; }
-
-  to {
-    opacity: 1; } }
-
-@-moz-keyframes fade-in {
-  from {
-    opacity: 0; }
-
-  to {
-    opacity: 1; } }
-
 @-webkit-keyframes fade-in {
   from {
     opacity: 0; }
@@ -110,21 +96,21 @@ header h2 {
   to {
     opacity: 1; } }
 
-@keyframes fade-out {
+@keyframes fade-in {
   from {
-    opacity: 1; }
+    opacity: 0; }
 
   to {
-    opacity: 0; } }
-
-@-moz-keyframes fade-out {
-  from {
-    opacity: 1; }
-
-  to {
-    opacity: 0; } }
+    opacity: 1; } }
 
 @-webkit-keyframes fade-out {
+  from {
+    opacity: 1; }
+
+  to {
+    opacity: 0; } }
+
+@keyframes fade-out {
   from {
     opacity: 1; }
 
@@ -171,35 +157,26 @@ header h2 {
       font-size: 3vw; } }
 
 .accueil.ng-enter {
-  -webkit-animation: 0.5s fade-in;
-  -moz-animation: 0.5s fade-in;
-  -o-animation: 0.5s fade-in;
-  animation: 0.5s fade-in;
+  -webkit-animation: 1s fade-in;
+          animation: 1s fade-in;
   z-index: 100; }
 
 .accueil.ng-leave {
-  -webkit-animation: 0.5s fade-out;
-  -moz-animation: 0.5s fade-out;
-  -o-animation: 0.5s fade-out;
-  animation: 0.5s fade-out;
+  -webkit-animation: 1s fade-out;
+          animation: 1s fade-out;
   z-index: 99; }
 
 .cv.ng-enter {
   -webkit-animation: scaleUp 1s both ease-in;
-  -moz-animation: scaleUp 1s both ease-in;
   animation: scaleUp 1s both ease-in; }
 
 .portfolio.ng-enter {
   -webkit-animation: 0.5s fade-in;
-  -moz-animation: 0.5s fade-in;
-  -o-animation: 0.5s fade-in;
   animation: 0.5s fade-in;
   z-index: 100; }
 
 .portfolio.ng-leave {
   -webkit-animation: 0.5s fade-out;
-  -moz-animation: 0.5s fade-out;
-  -o-animation: 0.5s fade-out;
   animation: 0.5s fade-out;
   z-index: 99; }
 
@@ -211,14 +188,17 @@ header h2 {
   width: 100%;
   height: 100%;
   margin-top: 15px; }
-  @media (min-width: 480px) {
+  @media (min-width: 1024px) {
     .contact .right {
       width: 80%;
       margin-top: 0px; } }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .contact .right {
+      width: 50%;
+      margin-top: 0px; } }
 
 #gmaps {
-  width: 100%;
-  height: 530px; }
+  height: 450px; }
 
 .button {
   font-size: 18px;
@@ -229,7 +209,8 @@ header h2 {
   color: white;
   display: block;
   margin: 9px 0 0 0;
-  transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+          transition: background-color 0.5s;
   text-decoration: none;
   position: relative;
   overflow: hidden;
@@ -244,7 +225,8 @@ header h2 {
     color: #F2831D;
     background: #FFF; }
     .button:hover span {
-      transition: opacity 0.5s, top 0.5s;
+      -webkit-transition: opacity 0.5s, top 0.5s;
+              transition: opacity 0.5s, top 0.5s;
       opacity: 1;
       border-color: #F2831D;
       right: 10px;
@@ -260,23 +242,55 @@ header h2 {
     border: 2px solid #F2831D;
     border-top: none;
     border-right: none;
-    transition: opacity 0.5s, top 0.5s, right 0.5s;
-    transform: rotate(225deg); }
+    -webkit-transition: opacity 0.5s, top 0.5s, right 0.5s;
+            transition: opacity 0.5s, top 0.5s, right 0.5s;
+    -webkit-transform: rotate(225deg);
+        -ms-transform: rotate(225deg);
+            transform: rotate(225deg); }
 
-button.btn-menu {
+/*
+  button.btn-menu{
+
+    background-image: url('./icon/menu-icon.png');
+    background-repeat: no-repeat;
+    height: 52px;
+    width: 52px;
+    border:0;
+
+    outline-width: 0px;
+    outline: none;
+  }*/
+#navicon {
   background: none;
-  background-image: url('./icon/menu-icon.png');
-  background-repeat: no-repeat;
   height: 52px;
   width: 52px;
-  border: 0;
   outline-width: 0px;
-  outline: none; }
+  outline: none;
+  border: solid 2px #F2831D;
+  border-radius: 26px;
+  padding-left: 9px;
+  -webkit-transition: background-color 500ms ease-out;
+          transition: background-color 500ms ease-out; }
+  #navicon span, #navicon span:before, #navicon span:after {
+    height: 2px;
+    width: 30px;
+    background: #F2831D;
+    position: absolute;
+    display: block;
+    content: ''; }
+  #navicon span:before {
+    top: -8px; }
+  #navicon span:after {
+    bottom: -8px; }
+
+.menu-open #navicon, #navicon:hover {
+  background-color: #F2831D; }
+  .menu-open #navicon span, .menu-open #navicon span:before, .menu-open #navicon span:after, #navicon:hover span, #navicon:hover span:before, #navicon:hover span:after {
+    background: white; }
 
 body {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
+  -webkit-transition: all 0.7s ease;
+          transition: all 0.7s ease; }
   body.menu-open {
     left: 240px; }
 
@@ -290,9 +304,8 @@ body {
   height: 100%;
   top: 0;
   z-index: 1000;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
+  -webkit-transition: all 0.7s ease;
+          transition: all 0.7s ease; }
   .menu.open {
     left: 0px; }
   .menu h1 {

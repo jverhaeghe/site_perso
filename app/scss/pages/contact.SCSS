@@ -13,13 +13,18 @@
     width: 100%;
     height: 100%;
     margin-top: 15px;
-    @include both{
+
+    @include desktop{
       width: 80%;
+      margin-top: 0px;
+    }
+    @include tablet{
+      width: 50%;
       margin-top: 0px;
     }
   }
 }
 #gmaps {
-  width: 100%;
-  height: 530px;
+  height: 450px;
+
 }
